@@ -10,7 +10,7 @@
 			"color":"red",
 			"fontSize":"16px"
 		};
-		//使用$.extend来进行传递进来的参数和插件默认值进行合并，以此来保护插件的默认值
+		//使用$.extend来进行传递进来的参数和插件默认值进行合并，第一个参数为{}以此来保护插件的默认值
 		var  setting = $.extend({},defaults,opt);
 		return this.css({
 			"color":setting.color,
