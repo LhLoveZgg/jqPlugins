@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" id="txt">
+</body>
+<script>
+	var obj  = {},
+	       tmp = {},
+	       txt  = document.querySelector("#txt");
+		 // console.log(txt);
+	 	Object.defineProperty(obj,"name",{
+			get(){
+				return tmp["name"];
+			},
+			set(val){
+				tmp["name"]  = val;
+				txt.value = val;
+			}
+		});
+	 	txt.value = obj.name;
+		txt.addEventListener('input',function(){
+			obj.name =  this.value;
+		});
+</script>
+</html>
