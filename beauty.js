@@ -16,4 +16,4 @@
 			"color":setting.color,
 			"fontSize":setting.fontSize
 		});
-	}
+	}	
